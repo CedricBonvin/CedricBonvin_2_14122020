@@ -92,12 +92,13 @@ th:not([align]) {
 
 * {
     font-family: Raleway;
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-.page {
-    padding: 20px;
+header{
+    margin-top: 145px;
+    padding: 5.5%;
 }
 
 a {
@@ -105,9 +106,18 @@ a {
     text-decoration: none;
 }
 h1{
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 700
 }
+h2{
+    font-size: 1.4em;
+    font-weight: 600
+}
+
+p{
+    margin: 15px 0;
+}
+
 
 /* ----------------   TOP BAR  ---------------------*/
 
@@ -117,17 +127,24 @@ h1{
     top: 0;
     display: flex;
     flex-flow: wrap;
+    z-index: 10;
     width: 100%;
     background: white;
-    padding-top: 15px
+    padding-top: 25px
     
+}
+li{
+    padding: 18px 0;
 }
 
 .topBarLogo {
     padding-left: 20px;
     width: 50%;
     color: var(--blue);
-
+}
+.logo{
+    position: absolute;
+    left: 25px;
 }
 
 .topBarInscrire {
@@ -140,23 +157,14 @@ h1{
 .topBarHebergement{
     width: 50%;
     text-align: center;
-    border-bottom:solid 2px var(--blue);
+    border-bottom:solid 3px var(--blue);
     color: var(--blue);
-}
-.topBarHebergement a, .topBarActivite a{
-    font-size: 1em
-}
 
+}
 .topBarActivite {
     width: 50%;
     text-align: center;
 }
-
-ul h1,
-li {
-    padding: 15px 0
-}
-
 
 .topBarLogo, .topBarInscrire a {
     font-weight: bold;
@@ -165,6 +173,163 @@ li {
 /* ----------------   HEADER  ---------------------*/
 
 
-header {
-    margin-top: 125px;
+.bouttonRecherche {
+    margin-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 35px;
+    border: solid 1px var(--gray);
+    max-width: 329px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    
 }
+
+.recherchePosition {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    text-align: center;
+    background: var(--gray);
+    border-radius: 10px 0 0 10px;
+}
+
+.iconePosition {
+    transform: scale(1.2)
+}
+
+.rechercheAction {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    background: var(--blue);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.loupe{
+    color: white;
+}
+
+.RechercheSaisie {
+    padding-left: 10px;
+    display: block;
+    width: 227px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
+}
+
+.RechercheSaisie:focus {
+    outline: 0;
+}
+
+
+/*--------  BOUTTON FILTRE  -----*/
+.filtreWrapper h3{
+    margin-top: 35px;
+    margin-bottom: px;
+    font-weight: 700;
+    font-size: 1.2em
+}
+.boutonFiltre {
+    box-sizing: content-box;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    border: solid 3px #f2f2f2;
+    border-left: none;
+    border-radius: 50px;
+    margin-top: 15px;
+    margin-right: 10px
+}
+
+
+.boutonFiltre:hover{
+    background: var(--gray);
+    border-left: none;
+    font-weight: 400;
+    transform: scale(1.05)
+}
+
+.bouttonFiltreCol1{
+    position: relative;
+    bottom: 3px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #deebff;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.bouttonFiltreIcone {
+    position: relative;
+    top: 3px;
+    transform: scale(1.3);
+    color: #0065fc
+}
+
+.BouttonFiltreText {
+    padding: 0 10px;
+    font-weight: 700;
+}
+
+/*--------  HEADER INFO  -----*/
+.wrapperfFiltreInfo{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 20px
+    
+}
+.bigBoxIcone{
+    width: 50px;
+  
+}
+
+.boxInfoIcone{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: solid 1px var(--gray);
+    border-radius: 50%;
+}
+.infoIcone { 
+    position: relative;
+    top: 0;
+    left: 50%;
+transform: scale(0.75) translateX(-50%);
+    color: var(--blue)
+    
+}
+
+
+/*--------- POPULAIRE ---------*/
+.boxPopulaire{
+        background: var(--gray);
+
+}
+.wrapperAside{
+padding: 0 5.5%    
+}
+
+.populaireIcone{
+    position: relative;
+    top: 8px;
+    right: 3px;
+    transform: scale(1.5);
+}
+
+.populaire{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+
+
