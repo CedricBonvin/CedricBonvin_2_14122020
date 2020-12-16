@@ -86,7 +86,13 @@ th:not([align]) {
     --gray: #f2f2f2;
     --blue: #0065fc;
     --lightBlue: #deebff;
+
+    --soleil: url("img/Hebergement/leSoleil-S.jpg");
+    --hotelBleu: url("img/Hebergement/hotelBleu-S.jpg");
+    --auCoeur: url("img/Hebergement/auCoeur-S.jpg");
 }
+
+
 
 /*------------  TAGS  ---------*/
 
@@ -96,7 +102,7 @@ th:not([align]) {
     font-size: 16px;
 }
 
-header{
+header {
     margin-top: 145px;
     padding: 5.5%;
 }
@@ -105,19 +111,24 @@ a {
     color: inherit;
     text-decoration: none;
 }
-h1{
+
+h1 {
     font-size: 1.4em;
     font-weight: 700
 }
-h2{
+
+h2 {
     font-size: 1.4em;
-    font-weight: 600
+    font-weight: 600;
 }
 
-p{
+p {
     margin: 15px 0;
 }
 
+strong: {
+    color: bold
+}
 
 /* ----------------   TOP BAR  ---------------------*/
 
@@ -131,9 +142,9 @@ p{
     width: 100%;
     background: white;
     padding-top: 25px
-    
 }
-li{
+
+li {
     padding: 18px 0;
 }
 
@@ -142,7 +153,8 @@ li{
     width: 50%;
     color: var(--blue);
 }
-.logo{
+
+.logo {
     position: absolute;
     left: 25px;
 }
@@ -154,19 +166,21 @@ li{
     color: var(--blue);
 }
 
-.topBarHebergement{
+.topBarHebergement {
     width: 50%;
     text-align: center;
-    border-bottom:solid 3px var(--blue);
+    border-bottom: solid 3px var(--blue);
     color: var(--blue);
 
 }
+
 .topBarActivite {
     width: 50%;
     text-align: center;
 }
 
-.topBarLogo, .topBarInscrire a {
+.topBarLogo,
+.topBarInscrire a {
     font-weight: bold;
 }
 
@@ -183,7 +197,7 @@ li{
     height: 50px;
     line-height: 50px;
     border-radius: 10px;
-    
+
 }
 
 .recherchePosition {
@@ -208,7 +222,8 @@ li{
     border-radius: 10px;
     cursor: pointer;
 }
-.loupe{
+
+.loupe {
     color: white;
 }
 
@@ -227,13 +242,16 @@ li{
 }
 
 
-/*--------  BOUTTON FILTRE  -----*/
-.filtreWrapper h3{
+/*-------- HEADER BOUTTON FILTRE  -----*/
+
+
+.filtreWrapper h3 {
     margin-top: 35px;
     margin-bottom: px;
     font-weight: 700;
     font-size: 1.2em
 }
+
 .boutonFiltre {
     box-sizing: content-box;
     display: inline-block;
@@ -247,14 +265,14 @@ li{
 }
 
 
-.boutonFiltre:hover{
+.boutonFiltre:hover {
     background: var(--gray);
     border-left: none;
     font-weight: 400;
     transform: scale(1.05)
 }
 
-.bouttonFiltreCol1{
+.bouttonFiltreCol1 {
     position: relative;
     bottom: 3px;
     display: inline-block;
@@ -277,59 +295,146 @@ li{
     font-weight: 700;
 }
 
-/*--------  HEADER INFO  -----*/
-.wrapperfFiltreInfo{
+/*--------  HEADER BOUTTON INFO  -----*/
+
+
+.wrapperfFiltreInfo {
     display: flex;
     align-items: stretch;
     width: 100%;
     margin-top: 35px;
     margin-bottom: 20px
-    
-}
-.bigBoxIcone{
-    width: 50px;
-  
 }
 
-.boxInfoIcone{
+.bigBoxIcone {
+    width: 50px;
+
+}
+
+.boxInfoIcone {
     display: block;
     width: 25px;
     height: 25px;
     border: solid 1px var(--gray);
     border-radius: 50%;
 }
-.infoIcone { 
+
+.infoIcone {
     position: relative;
     top: 0;
     left: 50%;
-transform: scale(0.75) translateX(-50%);
+    transform: scale(0.75) translateX(-50%);
     color: var(--blue)
-    
 }
 
 
 /*--------- POPULAIRE ---------*/
-.boxPopulaire{
-        background: var(--gray);
+
+
+.wrapperPopulaire {
+    background: var(--gray);
+    padding-bottom: 20px;
 
 }
-.wrapperAside{
-padding: 0 5.5%    
+
+.wrapperAside {
+    padding: 0 5.5%
 }
 
-.populaireIcone{
+.populaireIcone {
     position: relative;
     top: 8px;
     right: 3px;
     transform: scale(1.5);
 }
 
-.populaire{
+.populaireTitre {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 25px
+}
+
+.populaireCard {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    padding: 40px 0;
+    max-width: 350px;
+    height: 145px;
+    padding: 5px;
+    margin-bottom: 10px;
+
+    background: white;
+
+    border-radius: 25px
 }
+
+.imageLeSoleil {
+    background: var(--soleil)
+}
+
+.imageAuCoeur {
+    background: var(--auCoeur)
+}
+
+.imageHotelBleu {
+    background: var(--hotelBleu)
+}
+
+.populaireCardCol1 {
+    height: 100%;
+    width: 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: local;
+    border-radius: 25px 0 0 25px;
+}
+
+.populaireCardCol2 {
+
+    padding: 10px 13px;
+    padding-right: ;
+    height: 100%;
+}
+
+.populaireCard p {
+    margin-top: 2px;
+    font-size: 14px
+}
+
+.populaireCard h4 {
+    font-weight: 700
+}
+
+.populaireCardEtoile {
+    position: relative;
+    top: 25px;
+}
+
+.etoilePleine {
+    color: var(--blue);
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
+
+}
+
+/*--------- HEBERGEMENT ---------*/
+
+.hebergement h2 {
+    margin-top: 38px
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
