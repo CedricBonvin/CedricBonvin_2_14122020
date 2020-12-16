@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/88cce9f7c7.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <section class="topBar">
         <nav>
             <ul>
-                <h1 class="topBarLogo">Logo</h1>
+                <h1 class="topBarLogo"><a href="#"><img src="img/Reservia.svg" alt="Logo Reservia" class="logo"></a></h1>
                 <li class="topBarInscrire"><a href="#">S'inscrire</a></li>
                 <li class="topBarHebergement"><a href="#ancreHebergement">Hébergement</a></li>
                 <li class="topBarActivite"><a href="#ancreActivite">Activités</a></li>
@@ -27,69 +28,107 @@
 
     <!-- -------   HEADER --------->
 
-    <div class="page">
+    <div>
         <section>
             <header>
-                <h1> Trouvez votre hébergement pour des vacabces de rêve</h1>
+                <h1> Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <div class="bouttonRecherche">BOUTTON RECERCHE</div>
-                <div class="filtreWrapper">
-                    <h2>Filtres</h2>
-                    <div class="bouton">bouton</div>
-                    <div class="bouton">bouton</div>
-                    <div class="bouton">bouton</div>
-                    <div class="bouton">bouton</div>
-                </div>
-                <div class="filtreInfo">
-                    <i>icone</i>
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+
+                <div class="bouttonRecherche">
+                    <div class="recherchePosition"><i class="fas fa-map-marker-alt  iconePosition"></i></div>
+                    <input type="text" placeholder="recherche" class="RechercheSaisie">
+                    <div class="rechercheAction"><i class="fas fa-search loupe"></i></div>
                 </div>
 
+                <div class="filtreWrapper">
+                    <h3>Filtres</h3>
+
+                    <a href="#" class="boutonFiltre">
+                        <div class="bouttonFiltreCol1">
+                            <i class="fas fa-money-bill-wave bouttonFiltreIcone"></i>
+                        </div>
+                        <span class="BouttonFiltreText">Economique</span>
+                    </a>
+
+                    <a href="#" class="boutonFiltre">
+                        <div class="bouttonFiltreCol1">
+                            <i class="fas fa-male bouttonFiltreIcone"></i>
+                        </div>
+                        <span class="BouttonFiltreText">Familial</span>
+                    </a>
+
+                    <a href="#" class="boutonFiltre">
+                        <div class="bouttonFiltreCol1">
+                            <i class="fas fa-heart bouttonFiltreIcone "></i>
+                        </div>
+                        <span class="BouttonFiltreText">Romantique</span>
+                    </a>
+
+                    <a href="#" class="boutonFiltre">
+                        <div class="bouttonFiltreCol1">
+                            <i class="fas fa-dog bouttonFiltreIcone"></i>
+                        </div>
+                        <span class="BouttonFiltreText ">Animaux autorisé</span>
+                    </a>
+
+                </div>
+                <div class="wrapperfFiltreInfo">
+                    <div class="bigBoxIcone">
+                        <div class="boxInfoIcone">
+                            <i class="fas fa-info infoIcone"></i>
+                        </div>
+                    </div>
+                    <div class="infoPara">Plus de 500 logements sont disponibles dans cette ville</div>
+                </div>
             </header>
         </section>
 
         <!-- -------   POPULAIRE  --------->
 
         <main>
-            <section>
-                <aside>
-                    <div class="polulaire">
-                        <h2>Les plus populaires</h2>
-                        <i>I</i>
-                    </div>
-                    <div class="poulaireCard">CARD1</div>
-                    <div class="poulaireCard">CARD2</div>
-                    <div class="poulaireCard">CARD3</div>
-                </aside>
-            </section>
-
-            <!-- -------   HEBERGEMENT  --------->
-
-            <section class="hebergement" name="ancreHebergement">
-                <h2>Hébergement à Marseille</h2>
-                <div class="hebergementCard">CARD1</div>
-                <div class="hebergementCard">CARD2</div>
-                <div class="hebergementCard">CARD3</div>
-                <div class="hebergementCard">CARD4</div>
-                <div class="hebergementCard">CARD5</div>
-                <div class="hebergementCard">CARD6</div>
-                <p>Afficher plus</p>
-
-            </section>
-
-            <!-- -------   ACTIVITE  --------->
-
-            <section class="activite" id="ancreActivite">
-                <h2>Activités à Marseille</h2>
-                <div class="activiteCard">CARD1</div>
-                <div class="activiteCard">CARD2</div>
-                <div class="activiteCard">CARD3</div>
-                <div class="activiteCard">CARD4</div>
-                <div class="activiteCard">CARD5</div>
-                <div class="activiteCard">CARD6</div>
-            </section>
+            <div>
+                <section class="boxPopulaire">
+                    <aside class="wrapperAside">
+                        <div class="populaire">
+                            <h2>Les plus populaires</h2>
+                            <i class="fas fa-chart-line populaireIcone" ></i>
+                        </div>
+                        <div class="poulaireCard">CARD1</div>
+                        <div class="poulaireCard">CARD2</div>
+                        <div class="poulaireCard">CARD3</div>
+                    </aside>
+                </section>
+                
+                <!-- -------   HEBERGEMENT  --------->
+                
+                <section class="hebergement" id="ancreHebergement">
+                    <h2>Hébergement à Marseille</h2>
+                    <div class="hebergementCard">CARD1</div>
+                    <div class="hebergementCard">CARD2</div>
+                    <div class="hebergementCard">CARD3</div>
+                    <div class="hebergementCard">CARD4</div>
+                    <div class="hebergementCard">CARD5</div>
+                    <div class="hebergementCard">CARD6</div>
+                    <p>Afficher plus</p>
+                
+                </section>
+                
+                <!-- -------   ACTIVITE  --------->
+                
+                <section class="activite" id="ancreActivite">
+                    <h2>Activités à Marseille</h2>
+                    <div class="activiteCard">CARD1</div>
+                    <div class="activiteCard">CARD2</div>
+                    <div class="activiteCard">CARD3</div>
+                    <div class="activiteCard">CARD4</div>
+                    <div class="activiteCard">CARD5</div>
+                    <div class="activiteCard">CARD6</div>
+                </section>
+            </div>
         </main>
     </div>
+    
+    
     <!-- -------   FOOTER  --------->
 
 
@@ -115,5 +154,7 @@
         </div>
 
     </footer>
+
 </body>
+
 </html>
