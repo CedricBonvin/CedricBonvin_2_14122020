@@ -156,6 +156,8 @@ strong {
 }
 
 /* -----------  TOP BAR  -------*/
+
+
 .titreHiden {
     display: none;
 }
@@ -214,6 +216,8 @@ li {
 }
 
 /* -----------  HEADER  --------*/
+
+
 
 header p {
     padding-top: 15px;
@@ -367,15 +371,16 @@ header p {
     background: var(--gray);
     padding-bottom: 20px;
     padding: 0 5.5%;
-        padding-bottom: 25px
-
+    padding-bottom: 25px
 }
-.wrapperPopulaire h2{
+
+.wrapperPopulaire h2 {
     position: relative;
     padding: 30px 0px
 }
-.wrapperPopulaire h2::after{
-    
+
+.wrapperPopulaire h2::after {
+
     position: absolute;
     width: 25px;
     top: 30;
@@ -393,7 +398,7 @@ header p {
     display: flex;
     width: 100%;
     max-width: 350px;
-    height: 145px;
+/*    height: 145px;*/
     padding: 5px;
     margin-bottom: 10px;
 
@@ -415,7 +420,7 @@ header p {
 }
 
 .populaireCardCol1 {
-    height: 100%;
+    /*    height: 100%;*/
     width: 40%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -425,6 +430,7 @@ header p {
 }
 
 .populaireCardCol2 {
+
 
     padding: 10px 13px;
     height: 100%;
@@ -440,8 +446,7 @@ header p {
 }
 
 .populaireCardEtoile {
-    position: relative;
-    top: 25px;
+    margin-top: 30px
 }
 
 .etoilePleine {
@@ -474,7 +479,6 @@ header p {
     display: block;
     width: 100%;
     max-width: 350px;
-    height: 200px;
     padding: 5px;
     margin-bottom: 12px;
 
@@ -553,7 +557,6 @@ header p {
     display: block;
     width: 100%;
     max-width: 350px;
-    height: 190px;
     margin-bottom: 20px;
 
 
@@ -603,8 +606,8 @@ header p {
 
 .activiteCaption {
     font-weight: 700;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding: 20px 0;
+     padding-left: 20px;
     font-size: 1.1em;
 }
 
@@ -614,15 +617,18 @@ footer {
     width: 100%;
     margin-top: 45px;
     background: var(--gray);
+        padding: 0 5.5%;
+        padding-bottom: 30px;
+
+
 }
 
 .footerCol {
-    padding-left: 5.5%;
-    padding-top: 35px
+    padding-top: 35px;
+   
 }
 
 .footerWrapperCols {
-    padding-bottom: 30px;
 
 }
 
@@ -637,11 +643,109 @@ footer {
     font-size: 1.2em;
 }
 
+/* -----   MEDIA QUERIES ----- */
 
 
+@media only screen and (min-width : 600px) {
 
+   
+    
+    .wrapperPopulaire{
+  
+     
+        padding: 0 10px;
+        padding-bottom: 30px;
+        border-radius: 20px;
+    }
+    
+    .populaireWrapperCard{
+      display: flex;
+        justify-content: space-around
+    }
 
+    .populaireCard {
+        display: block;
+        max-width: 200px;
+        margin: 5px;
+       
+    }
 
+    .populaireCardCol1 {
+        height: 100px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: local;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .populaireCardEtoile{
+        margin-top: 10px
+    }
+    
+       
+    /* HEBERGEMENT*/
+    
+    .wrapperHebergementCard{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        flex-flow: wrap
+    }
+    .hebergementCard{
+        position: relative;
+        margin:  5px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+    
+    .hebergementCardEtoile{
+        padding-bottom: 10px;
+        position: absolute;
+        bottom: 0;
+    }
+    .hebergementCardCaption p{
+        padding-bottom: 30px;
+    }
+    
+    
+    /* ACTIVITE */
+    
+    .activiteWrapperCard{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    .activiteWrapperCard h2{
+        margin-top: 30px;
+    }
+    
+    
+    .activiteCard{
+        margin: 5px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+   
+    
+    /* --------- FOOTER  ----------*/
+    
+    .footerWrapperCols{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    .footerCol{ 
+        width: 30%;
+        padding: 0 10px;
+        padding-top: 30px; 
+    }
+    
+}
 
-
-
+@media only screen and (min-width : 900px){
+    
+    
+}
