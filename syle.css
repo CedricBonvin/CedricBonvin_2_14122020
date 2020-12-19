@@ -1,3 +1,6 @@
+/*-----------  MINI RESET  -----*/
+
+
 html,
 body,
 p,
@@ -81,20 +84,43 @@ th:not([align]) {
     text-align: left
 }
 
-/*-------------VARIABLE ----------------*/
+/*-------------VARIABLE --------*/
 :root {
     --gray: #f2f2f2;
     --blue: #0065fc;
     --lightBlue: #deebff;
 
-    --soleil: url("img/Hebergement/leSoleil-S.jpg");
-    --hotelBleu: url("img/Hebergement/hotelBleu-S.jpg");
-    --auCoeur: url("img/Hebergement/auCoeur-S.jpg");
+    /*---- POPULAIRE---*/
+
+    --soleil: url("img/populaire/leSoleil-S.jpg");
+    --hotelBleu: url("img/populaire/hotelBleu-S.jpg");
+    --auCoeur: url("img/populaire/auCoeur-S.jpg");
+
+    /*---- HEBERGEMENT ---*/
+
+
+    --cannebiere: url("img/hebergement/hotelCannebiere-S.jpg");
+    --hotelDuPort: url("img/hebergement/hotelDuPort-S.jpg");
+    --hotelLesMouettes: url("img/hebergement/hotelLesMouettes-S.jpg");
+    --hotelDeLaMer: url("img/hebergement/hotelDeLaMer-S.jpg");
+    --hotelLePanier: url("img/hebergement/hotelLePanier-S.jpg");
+    --HotelAmina: url("img/hebergement/hotelAmina-S.jpg");
+
+    /*---- ACTIVITE --*/
+
+    --dameDeLaGarde: url("img/activite/dameDeLaGarde-S.jpg");
+    --fortDePomegues: url("img/activite/fortDePomegues-S.jpg");
+    --ileDeFrioul: url("img/activite/ileDeFrioul-S.jpg");
+    --parcCalanques: url("img/activite/parcCalanques-S.jpg");
+    --parcLongchamp: url("img/activite/ParcLongchamp-S.jpg");
+    --vieuxPort: url("img/activite/vieuxPort-S.jpg");
+
+
+
 }
 
-
-
 /*------------  TAGS  ---------*/
+
 
 * {
     font-family: Raleway;
@@ -122,16 +148,17 @@ h2 {
     font-weight: 600;
 }
 
-p {
-    margin: 15px 0;
+
+
+strong {
+    font-weight: 600;
+
 }
 
-strong: {
-    color: bold
+/* -----------  TOP BAR  -------*/
+.titreHiden {
+    display: none;
 }
-
-/* ----------------   TOP BAR  ---------------------*/
-
 
 .topBar ul {
     position: fixed;
@@ -149,6 +176,8 @@ li {
 }
 
 .topBarLogo {
+    position: relative;
+    bottom: 15px;
     padding-left: 20px;
     width: 50%;
     color: var(--blue);
@@ -184,8 +213,11 @@ li {
     font-weight: bold;
 }
 
-/* ----------------   HEADER  ---------------------*/
+/* -----------  HEADER  --------*/
 
+header p {
+    padding-top: 15px;
+}
 
 .bouttonRecherche {
     margin-top: 20px;
@@ -209,7 +241,7 @@ li {
     border-radius: 10px 0 0 10px;
 }
 
-.iconePosition {
+.RechercheIconePosition {
     transform: scale(1.2)
 }
 
@@ -241,13 +273,11 @@ li {
     outline: 0;
 }
 
-
 /*-------- HEADER BOUTTON FILTRE  -----*/
 
 
 .filtreWrapper h3 {
     margin-top: 35px;
-    margin-bottom: px;
     font-weight: 700;
     font-size: 1.2em
 }
@@ -261,7 +291,7 @@ li {
     border-left: none;
     border-radius: 50px;
     margin-top: 15px;
-    margin-right: 10px
+    margin-right: 5px
 }
 
 
@@ -291,8 +321,9 @@ li {
 }
 
 .BouttonFiltreText {
-    padding: 0 10px;
-    font-weight: 700;
+    padding-left: 5px;
+    padding-right: 12px;
+    font-weight: 600;
 }
 
 /*--------  HEADER BOUTTON INFO  -----*/
@@ -327,34 +358,36 @@ li {
     color: var(--blue)
 }
 
+/*------------ POPULAIRE ---------*/
 
-/*--------- POPULAIRE ---------*/
+
 
 
 .wrapperPopulaire {
     background: var(--gray);
     padding-bottom: 20px;
+    padding: 0 5.5%;
+        padding-bottom: 25px
 
 }
-
-.wrapperAside {
-    padding: 0 5.5%
-}
-
-.populaireIcone {
+.wrapperPopulaire h2{
     position: relative;
-    top: 8px;
-    right: 3px;
-    transform: scale(1.5);
+    padding: 30px 0px
+}
+.wrapperPopulaire h2::after{
+    
+    position: absolute;
+    width: 25px;
+    top: 30;
+    right: 0;
+    content: url("img/incone/chart1.svg");
 }
 
-.populaireTitre {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 25px
-}
+
+
+/*---- CARD POLULAIRE  ---*/
+
+
 
 .populaireCard {
     display: flex;
@@ -388,18 +421,17 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: local;
-    border-radius: 25px 0 0 25px;
+    border-radius: 20px 0 0 20px;
 }
 
 .populaireCardCol2 {
 
     padding: 10px 13px;
-    padding-right: ;
     height: 100%;
 }
 
 .populaireCard p {
-    margin-top: 2px;
+    margin-top: 5px;
     font-size: 14px
 }
 
@@ -417,18 +449,193 @@ li {
     font-size: 0.7em;
     padding: 0;
     margin: 0;
+}
 
+.etoileVide {
+    color: var(--gray);
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
 }
 
 /*--------- HEBERGEMENT ---------*/
 
-.hebergement h2 {
-    margin-top: 38px
+.hebergementWrapper h2 {
+    margin-top: 38px;
+    padding-bottom: 15px
 }
 
+.hebergementWrapper {
+    width: 100%;
+    padding: 0 5.5%
+}
+
+.hebergementCard {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    padding: 5px;
+    margin-bottom: 12px;
+
+    border: solid 1px #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #f2f2f2
+}
+
+.imageCannebiere {
+    background: var(--cannebiere)
+}
+
+.imageHotelDuPort {
+    background: var(--hotelDuPort)
+}
+
+.imageHotelLesMouettes {
+    background: var(--hotelLesMouettes)
+}
+
+.imageHotelDeLaMer {
+    background: var(--hotelDeLaMer)
+}
+
+.imageHotelLePanier {
+    background: var(--hotelLePanier)
+}
+
+.imageHotelAmina {
+    background: var(--HotelAmina)
+}
+
+.hebergementWrapperImage {
+    width: 100%;
+    height: 115px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: local;
+    border-radius: 15px 15px 0 0;
+}
+
+.hebergementCardCaption {
+    padding-left: 15px
+}
+
+.hebergementWrapper h4 {
+    padding-top: 7px;
+    font-weight: 700
+}
+
+.hebergementWrapper p {
+    padding: 3px 0;
+    font-size: 0.9em
+}
+
+.afficherPlus {
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 15px 0;
+}
+
+/*--------- ACTIVITE ---------*/
+
+.activiteWrapper {
+    width: 100%;
+    padding: 0 5.5%
+}
+
+.activiteWrapper h2 {
+    padding: 30px 0;
+}
+
+.activiteCard {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 190px;
+    margin-bottom: 20px;
 
 
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #f2f2f2
+}
 
+.imageDameDeLaGarde {
+    background: var(--dameDeLaGarde);
+}
+
+.imageFortDePomegues {
+    background: var(--fortDePomegues);
+    background-position: center;
+}
+
+.imageIleDeFrioul {
+    background: var(--ileDeFrioul);
+    background-position: center;
+}
+
+.imageParcCalanques {
+    background: var(--parcCalanques);
+    background-position: center;
+}
+
+.imageParcLongchamp {
+    background: var(--parcLongchamp);
+    background-position: center;
+}
+
+.imageVieuxPort {
+    background: var(--vieuxPort);
+    background-position: top center;
+
+}
+
+.activiteWrapperImage {
+    width: 100%;
+    height: 134px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 15px 15px 0 0;
+}
+
+.activiteCaption {
+    font-weight: 700;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 1.1em;
+}
+
+/*-------  FOOTER  -------*/
+
+footer {
+    width: 100%;
+    margin-top: 45px;
+    background: var(--gray);
+}
+
+.footerCol {
+    padding-left: 5.5%;
+    padding-top: 35px
+}
+
+.footerWrapperCols {
+    padding-bottom: 30px;
+
+}
+
+.footerWrapperCols a {
+    display: inline-block;
+    padding: 8px 0;
+
+}
+
+.footerWrapperCols h2 {
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
 
 
 
