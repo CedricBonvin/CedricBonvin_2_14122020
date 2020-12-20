@@ -650,7 +650,7 @@ footer {
     .wrapperPopulaire{
   
      
-        padding: 0 10px;
+        padding: 0 5.5%;
         padding-bottom: 30px;
         border-radius: 20px;
     }
@@ -730,7 +730,8 @@ footer {
     .activiteCard{
         margin: 5px;
         margin-bottom: 20px;
-        width: 200px;
+         min-width: 250px;
+        max-width: 25%;
     }
    
     
@@ -774,7 +775,9 @@ footer {
     /*------   HEADER -----*/
     
     header {
-    margin-top: 60px
+    margin-top: 60px;
+        padding-bottom: 20px
+        
     }
     .filtreWrapper{
         padding-top: 20px;
@@ -799,7 +802,8 @@ footer {
     
     .wrapperPopulaire{
         width: 30%; 
-        order: 2;   
+        order: 2;  
+        padding: 20px;
     }
     
     .populaireWrapperCard{
@@ -812,7 +816,7 @@ footer {
         min-width: 100%; 
         height: 140px;
         padding: 0;
-        margin: 0;
+        margin: 10px 0;
     }
     
     .populaireCardCol1{
@@ -821,7 +825,7 @@ footer {
         border-radius: 20px 0px 0px 20px;
     }
     .populaireCardCol2{
-        padding: 0 10px;
+        padding: 15px 10px;
         width: 60%;
     } 
     
