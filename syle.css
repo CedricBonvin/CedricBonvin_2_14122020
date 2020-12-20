@@ -366,7 +366,6 @@ header p {
 
 
 
-
 .wrapperPopulaire {
     background: var(--gray);
     padding-bottom: 20px;
@@ -383,12 +382,10 @@ header p {
 
     position: absolute;
     width: 25px;
-    top: 30;
+    top: 30px;
     right: 0;
     content: url("img/incone/chart1.svg");
 }
-
-
 
 /*---- CARD POLULAIRE  ---*/
 
@@ -398,7 +395,6 @@ header p {
     display: flex;
     width: 100%;
     max-width: 350px;
-/*    height: 145px;*/
     padding: 5px;
     margin-bottom: 10px;
 
@@ -420,7 +416,6 @@ header p {
 }
 
 .populaireCardCol1 {
-    /*    height: 100%;*/
     width: 40%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -523,7 +518,9 @@ header p {
 }
 
 .hebergementCardCaption {
-    padding-left: 15px
+    padding-left: 15px;
+    background: white;
+    border-radius: 20px;
 }
 
 .hebergementWrapper h4 {
@@ -665,7 +662,9 @@ footer {
 
     .populaireCard {
         display: block;
-        max-width: 200px;
+        position: relative;
+        min-width: 180px;
+        max-width: 300px;
         margin: 5px;
        
     }
@@ -679,9 +678,12 @@ footer {
         background-attachment: local;
         border-radius: 20px 20px 0 0;
     }
-    
+    .populaireCardCol2 p{
+        padding-bottom: 20px
+    }
     .populaireCardEtoile{
-        margin-top: 10px
+            position: absolute;
+        bottom: 10px;
     }
     
        
@@ -691,13 +693,16 @@ footer {
         display: flex;
         justify-content: space-around;
         margin-top: 20px;
-        flex-flow: wrap
+        flex-flow: wrap;
+        
     }
     .hebergementCard{
         position: relative;
         margin:  5px;
         margin-bottom: 20px;
-        width: 200px;
+        min-width: 250px;
+        max-width: 25%;
+        background: white;
     }
     
     .hebergementCardEtoile{
@@ -745,7 +750,148 @@ footer {
     
 }
 
-@media only screen and (min-width : 900px){
+@media only screen and (min-width : 1350px){
     
+    /*-----TOP BAR ----*/
+    
+    ul li:first-child{
+        flex-grow: 3;
+        margin-left: 3.5%;
+            
+    }
+    .topBarInscrire{
+        order: 4;
+        padding-right: 75px;
+    }
+    .topBar li {
+        width: auto;
+        padding-left: 60px;
+    }
+    .topBarHebergement{
+        border: none
+    }
+    
+    /*------   HEADER -----*/
+    
+    header {
+    margin-top: 60px
+    }
+    .filtreWrapper{
+        padding-top: 20px;
+            padding-bottom: 0px;
+                margin-bottom: 0px;
+    }
+    .filtreWrapper h3 {
+        display: inline-block;
+        padding-right: 20px
+    }
+    
+    /* ----- MAIN------*/
+    
+    
+    main{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding:0 5.5%;
+    }
+    
+    
+    .wrapperPopulaire{
+        width: 30%; 
+        order: 2;   
+    }
+    
+    .populaireWrapperCard{
+        flex-flow: row wrap;   
+        justify-content: flex-start;   
+    }
+    
+    .populaireCard{
+        display: flex;
+        min-width: 100%; 
+        height: 140px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .populaireCardCol1{
+        height: 100%;
+        width: 40%;
+        border-radius: 20px 0px 0px 20px;
+    }
+    .populaireCardCol2{
+        padding: 0 10px;
+        width: 60%;
+    } 
+    
+    .hebergementWrapper{
+        order: 1;
+        justify-content: space-around;
+        width: calc( 100% - 33% );
+        padding: 0;
+        background: var(--gray);
+        border-radius: 0px;
+        border-radius: 20px;
+    }
+    .hebergementCard{
+        width: 250px;
+    }
+    .wrapperHebergementCard{
+        justify-content: space-around
+    }
+    .activiteWrapper{
+        order: 3;
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+    
+    /* ----- ACTIVITE -----*/
+    .activiteWrapper{
+        margin: 0;
+        padding: 0;
+    }
+    .activiteWrapperCard{
+        height: 450px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .port, .calanques{
+        height: 100%;
+    }
+    
+    .activiteCard{
+        width: 300px;
+    }
+    
+    .imageVieuxPort, .imageParcCalanques  {
+        height: 85%;
+    }
+    .imageIleDeFrioul{
+        height: 100px;
+    }
+    .imageFortDePomegues{
+        height: 170px;
+    }
+    .imageParcLongchamp{
+        height: 150px;
+    }
+    .imageDameDeLaGarde{
+        height: 120px;
+    }
+    
+    .hebergementWrapper h2, .afficherPlus {
+        padding-left: 5px
+    }
     
 }
+
+
+
+
+
+
+
