@@ -1,5 +1,7 @@
 /*-----------  MINI RESET  -----*/
 
+@media screen and (min-width : 50px){
+
 
 html,
 body,
@@ -639,11 +641,11 @@ footer {
     padding-bottom: 10px;
     font-size: 1.2em;
 }
-
+}
 /* -----   MEDIA QUERIES ----- */
 
 
-@media only screen and (min-width : 600px) {
+@media  screen and (min-width : 600px) {
 
    
     
@@ -751,7 +753,7 @@ footer {
     
 }
 
-@media only screen and (min-width : 1350px){
+@media screen and (min-width : 1350px){
     
     /*-----TOP BAR ----*/
     
