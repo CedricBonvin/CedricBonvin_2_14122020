@@ -1,6 +1,6 @@
 /*-----------  MINI RESET  -----*/
 
-@media screen and (min-width : 50px){
+
 
 
 html,
@@ -226,22 +226,21 @@ header p {
 }
 
 .bouttonRecherche {
-    margin-top: 20px;
-    box-sizing: border-box;
     display: flex;
     margin-top: 35px;
     border: solid 1px var(--gray);
-    max-width: 329px;
     height: 50px;
     line-height: 50px;
     border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
 
 }
 
 .recherchePosition {
     position: relative;
     z-index: 2;
-    width: 50px;
+    min-width: 50px;
     text-align: center;
     background: var(--gray);
     border-radius: 10px 0 0 10px;
@@ -253,8 +252,8 @@ header p {
 
 .rechercheAction {
     position: relative;
+    margin-left: auto;
     z-index: 2;
-    width: 50px;
     background: var(--blue);
     text-align: center;
     border-radius: 10px;
@@ -263,16 +262,17 @@ header p {
 
 .loupe {
     color: white;
+    width: 50px;
 }
 
 .RechercheSaisie {
     padding-left: 10px;
-    display: block;
-    width: 227px;
     border: none;
     font-size: 1.1em;
     font-weight: bold;
     color: black;
+    min-width: 50px;
+    max-width: 300px;
 }
 
 .RechercheSaisie:focus {
@@ -297,7 +297,7 @@ header p {
     border-left: none;
     border-radius: 50px;
     margin-top: 15px;
-    margin-right: 5px
+    margin-right: 15px
 }
 
 
@@ -321,9 +321,12 @@ header p {
 
 .bouttonFiltreIcone {
     position: relative;
-    top: 3px;
+    top: 4px;
     transform: scale(1.3);
     color: #0065fc
+}
+.textRechercher{
+    display: none;
 }
 
 .BouttonFiltreText {
@@ -349,7 +352,7 @@ header p {
 }
 
 .boxInfoIcone {
-    display: block;
+    display:block;
     width: 25px;
     height: 25px;
     border: solid 1px var(--gray);
@@ -394,9 +397,10 @@ header p {
 
 
 .populaireCard {
+    margin: auto;
     display: flex;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     padding: 5px;
     margin-bottom: 10px;
 
@@ -418,7 +422,7 @@ header p {
 }
 
 .populaireCardCol1 {
-    width: 40%;
+    min-width: 40%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -474,11 +478,10 @@ header p {
 
 .hebergementCard {
     display: block;
-    width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     padding: 5px;
+    margin: auto;
     margin-bottom: 12px;
-
     border: solid 1px #f2f2f2;
     border-radius: 20px;
     box-shadow: 0px 0px 15px #f2f2f2
@@ -553,8 +556,9 @@ header p {
 }
 
 .activiteCard {
+    margin: auto;
     display: block;
-    max-width: 350px;
+    max-width: 400px;
     margin-bottom: 20px;
     
 
@@ -641,25 +645,36 @@ footer {
     padding-bottom: 10px;
     font-size: 1.2em;
 }
-}
+
 /* -----   MEDIA QUERIES ----- */
 
 
 @media  screen and (min-width : 600px) {
 
-   
+    .loupe{
+        display: none;
+    }
+    .textRechercher{
+        
+        
+        display: block;
+        padding: 0 10px;
+        height: 48px;
+        color: white;
+        border-radius: 0 50px 50px 0;
+        background: var(--blue)
+    }
     
     .wrapperPopulaire{
-  
-     
         padding: 0 5.5%;
         padding-bottom: 30px;
         border-radius: 20px;
     }
     
     .populaireWrapperCard{
-      display: flex;
-        justify-content: space-around
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
     }
 
     .populaireCard {
@@ -693,17 +708,18 @@ footer {
     
     .wrapperHebergementCard{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-top: 20px;
         flex-flow: wrap;
         
     }
     .hebergementCard{
         position: relative;
-        margin:  5px;
+        margin: 0;
         margin-bottom: 20px;
-        min-width: 250px;
-        max-width: 25%;
+        
+        width: 100%;
+        max-width: 30%;
         background: white;
     }
     
@@ -732,8 +748,8 @@ footer {
     .activiteCard{
         margin: 5px;
         margin-bottom: 20px;
-         min-width: 250px;
-        max-width: 25%;
+          width: 100%;
+        max-width: 30%;
     }
    
     
@@ -783,8 +799,6 @@ footer {
     }
     .filtreWrapper{
         padding-top: 20px;
-            padding-bottom: 0px;
-                margin-bottom: 0px;
     }
     .filtreWrapper h3 {
         display: inline-block;
@@ -805,8 +819,14 @@ footer {
     .wrapperPopulaire{
         width: 30%; 
         order: 2;  
-        padding: 20px;
+        padding:  0 20px;
     }
+    .wrapperPopulaire h2 {
+       padding-top: 30px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+  
     
     .populaireWrapperCard{
         flex-flow: row wrap;   
@@ -817,9 +837,12 @@ footer {
         display: flex;
         min-width: 100%; 
         height: 140px;
-        padding: 0;
-        margin: 10px 0;
+        margin: 15px 0;
     }
+    .populaireCard:nth-child(1){
+        margin-top: 5px;
+    }
+   
     
     .populaireCardCol1{
         height: 100%;
@@ -833,29 +856,41 @@ footer {
     
     .hebergementWrapper{
         order: 1;
-        justify-content: space-around;
         width: calc( 100% - 33% );
-        padding: 0;
+        padding: 0 10px;
         background: var(--gray);
-        border-radius: 0px;
         border-radius: 20px;
     }
+    .hebergementWrapper h2{
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
     .hebergementCard{
-        width: 250px;
+        width: 30%;
     }
     .wrapperHebergementCard{
-        justify-content: space-around
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 20px;
     }
-    .activiteWrapper{
+    .afficherPlus {
+        padding-bottom: 40px;
+    }
+   
+    
+    
+    /* ----- ACTIVITE -----*/
+    
+     .activiteWrapper{
         order: 3;
         width: 100%;
         border-radius: 20px;
     }
-    
-    
-    /* ----- ACTIVITE -----*/
+    .activiteWrapper h2 {
+        padding-top: 50px;
+    }
     .activiteWrapper{
-        margin: 0;
         padding: 0;
     }
     .activiteWrapperCard{
@@ -864,7 +899,6 @@ footer {
         flex-flow: column wrap;
         justify-content: space-between;
         align-items: center;
-        border: solid;
         align-content: space-between;
     }
     .port, .calanques{
@@ -873,9 +907,8 @@ footer {
     
     .activiteCard{
         
-        width: 300px;
+        width: 23%;
         min-width: 250px;
-        margin: 0;
     }
     
     .imageVieuxPort, .imageParcCalanques  {
@@ -895,7 +928,7 @@ footer {
     }
     
     .hebergementWrapper h2, .afficherPlus {
-        padding-left: 5px
+        padding-left: 20px
     }
     
 }
