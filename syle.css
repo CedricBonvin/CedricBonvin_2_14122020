@@ -554,9 +554,9 @@ header p {
 
 .activiteCard {
     display: block;
-    width: 100%;
     max-width: 350px;
     margin-bottom: 20px;
+    
 
 
     border-radius: 20px;
@@ -864,13 +864,18 @@ footer {
         flex-flow: column wrap;
         justify-content: space-between;
         align-items: center;
+        border: solid;
+        align-content: space-between;
     }
     .port, .calanques{
         height: 100%;
     }
     
     .activiteCard{
+        
         width: 300px;
+        min-width: 250px;
+        margin: 0;
     }
     
     .imageVieuxPort, .imageParcCalanques  {
